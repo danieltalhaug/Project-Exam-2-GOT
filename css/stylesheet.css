@@ -54,8 +54,7 @@ h4,h5,h6,p {
 	font-size: 2em;
 	color: #FFBF31;
 }
-
-#characterSelectText {
+.info-container h2 {
 	color: #FFBF31;
 }
 .overlay--cards {
@@ -124,7 +123,21 @@ h4,h5,h6,p {
 	background-color: #F0B42E;
 	transition: .2s;
 }
-
+.pulsate {
+	-webkit-animation: pulsate 3s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+}
+@-webkit-keyframes pulsate {
+    0% { 
+        transform: scale(1);
+    }
+    50% { 
+        transform: scale(1.2);
+    }
+    100% { 
+        transform: scale(1);
+    }
+}
 .card--background_robb {
 	background-image: url("../images/heroes/Robb_Stark.png");
 	
