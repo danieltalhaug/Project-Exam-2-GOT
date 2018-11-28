@@ -32,7 +32,7 @@ h4,h5,h6,p {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 	transition: 2s;
 }
 
@@ -56,6 +56,11 @@ h4,h5,h6,p {
 }
 .info-container h2 {
 	color: #FFBF31;
+}
+.info-text {
+	padding-top: 50px;
+	text-align: center;
+	font-size: 2.5em;
 }
 .overlay--cards {
 	max-width: 1200px;
@@ -138,9 +143,11 @@ h4,h5,h6,p {
         transform: scale(1);
     }
 }
+.placement {
+	z-index: -1;
+}
 .card--background_robb {
 	background-image: url("../images/heroes/Robb_Stark.png");
-	
 }
 .card--background_sansa {
 	background-image: url("../images/heroes/Sansa_Stark.png");
