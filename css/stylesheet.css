@@ -33,6 +33,7 @@ h4,h5,h6,p {
 	bottom: 0;
 	left: 0;
 	z-index: 1;
+	transition: 2s;
 }
 
 .overlay--background {
@@ -102,9 +103,26 @@ h4,h5,h6,p {
 	padding-top: 100px;
 }
 .start-button {
+	box-shadow: 0 5px 20px black;
+	border: none;
 	display: inline;
 	font-size: 4em;
 	padding: 20px;
+	font-family: 'Marcellus SC', serif;
+}
+.start-button--orange {
+	background-color: #FFBF31;
+	color: #12293b;
+}
+.start-button--orange:hover {
+	background-color: #FFCB31;
+	transition: .1s;
+}
+.start-button--orange:active {
+/*	box-shadow: 0 1px 20px black;*/
+	transform: translateY(2px);
+	background-color: #F0B42E;
+	transition: .2s;
 }
 
 .card--background_robb {
