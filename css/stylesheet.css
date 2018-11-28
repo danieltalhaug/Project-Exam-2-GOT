@@ -1,3 +1,140 @@
 @charset "utf-8";
 /* CSS Document */
+/*
+font-family: 'Marcellus SC', serif;
+font-family: 'Scheherazade', serif;
+*/
+* {
+	margin: 0;
+	padding: 0;
+}
+h1,h2,h3 {
+	font-family: 'Cinzel', serif;
+	color: white; 
+	font-weight: 300;
+}
+h4,h5,h6,p {
+	font-family: 'Scheherazade', serif;
+	color: white;
+	font-weight: 300;
+	
+}
 
+.center {
+	margin: 0 auto 0 auto;
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.overlay--background {
+	background-color: #12293b;
+}
+
+.overlay--logo {
+	display: block;
+	padding: 100px 0 100px 0;
+	width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.info-container {
+	height: 100px;
+	text-align: center;
+	font-size: 2em;
+	color: #FFBF31;
+}
+
+#characterSelectText {
+	color: #FFBF31;
+}
+.overlay--cards {
+	max-width: 1200px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	height: 200px;
+	width: 200px;
+	border: 1px solid white;
+	box-shadow: 0 5px 20px black;
+	margin: 5px;
+	text-align: center;
+	background-size: cover;
+	filter: grayscale(1);
+	cursor: pointer;
+}
+.card:hover {
+	filter: grayscale(0);
+	transition: .2s;
+}
+
+.card--header {
+	font-size: 1.5em;
+	letter-spacing: 2px;
+	margin: 5px;
+	padding-top: 80px;
+	text-shadow: 2px 2px black;
+}
+
+.card--title {
+	font-size: 1em;
+	letter-spacing: 2px;
+	margin: 5px;
+	padding-top: 5px;
+	text-shadow: 2px 2px black;
+}
+
+.button-container {
+	text-align:center;
+	padding-top: 100px;
+}
+.start-button {
+	display: inline;
+	font-size: 4em;
+	padding: 20px;
+}
+
+.card--background_robb {
+	background-image: url("../images/heroes/Robb_Stark.png");
+	
+}
+.card--background_sansa {
+	background-image: url("../images/heroes/Sansa_Stark.png");
+}
+.card--background_arya {
+	background-image: url("../images/heroes/Arya_Stark.png");
+}
+.card--background_jon {
+	background-image: url("../images/heroes/Jon_Snow.png");
+}
+.card--background_theon{
+	background-image: url("../images/heroes/Theon_Greyjoy.png");
+}
+.card--background_tyrion {
+	background-image: url("../images/heroes/Tyrion_Lannister.png");
+}
+.card--background_stannis {
+	background-image: url("../images/heroes/Stannis_Baratheon.png");
+}
+.card--background_davos {
+	background-image: url("../images/heroes/Davos_Seaworth.png");
+}
+.card--background_daenerys {
+	background-image: url("../images/heroes/Daenerys_Targaryen.png");
+}
+.card--background_viserys {
+	background-image: url("../images/heroes/Viserys_Targaryen.png");
+}
