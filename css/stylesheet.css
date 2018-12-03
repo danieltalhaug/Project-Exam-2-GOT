@@ -34,7 +34,7 @@ h4,h5,h6,p {
 	left: 0;
 	z-index: 2;
 	transition: 2s;
-	display: none;
+/*	display: none;*/
 }
 
 .overlay--background {
@@ -87,7 +87,7 @@ h4,h5,h6,p {
 	transition: .2s;
 }
 
-.card--header {
+.card h3 {
 	font-size: 1.5em;
 	letter-spacing: 2px;
 	margin: 5px;
@@ -95,7 +95,7 @@ h4,h5,h6,p {
 	text-shadow: 2px 2px black;
 }
 
-.card--title {
+.card h4 {
 	font-size: 1em;
 	letter-spacing: 2px;
 	margin: 5px;
