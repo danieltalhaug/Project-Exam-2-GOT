@@ -19,7 +19,15 @@ h4,h5,h6,p {
 	font-weight: 300;
 	
 }
-
+.debug-box {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: rgba(0,0,0,0.5);
+	padding: 20px 40px 20px 40px;
+	color: white;
+	z-index: 20;
+}
 .center {
 	margin: 0 auto 0 auto;
 }

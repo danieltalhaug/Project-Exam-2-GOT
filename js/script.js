@@ -19,7 +19,22 @@ var robbStarkCard = document.getElementById('robbStarkCard'),
 
 var characterOverlay = document.getElementById('characterSelection'),
 	startingGametTxt = document.getElementById('startingGametTxt'),
-	characterSelectText = document.getElementById('characterSelectText');
+	characterSelectText = document.getElementById('characterSelectText'),
+	debugPlayer1Char = document.getElementById('player1char'),
+	debugPlayer1Pos = document.getElementById('player1pos'),
+	debugPlayer2Char = document.getElementById('player2char'),
+	debugPlayer2Pos = document.getElementById('player2pos');
+
+// Feed debug box with information. This updates itself every 1 second. 
+function debugMonitor() {
+	setInterval(function(){
+		debugPlayer1Char.innerHTML = "player 1 char: " + player1Character;
+		debugPlayer1Pos.innerHTML = "player 1 pos : " + player1Position;
+		debugPlayer2Char.innerHTML = "player 2 char: " + player2Character;
+		debugPlayer2Pos.innerHTML = "player 2 pos : " + player2Position;
+	}, 1000);
+}
+debugMonitor();
 
 // Closes the Character selection overlay
 function closeOverlay() {
@@ -144,11 +159,11 @@ function selectTyrionLannister() {
 function selectStannisBaratheon() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
-		player1Character = "Tyrion Lannister";
+		player1Character = "Stannis Baratheon";
 		stannisBaratheonCard.style.filter = "grayscale(0)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
-		player2Character = "Tyrion Lannister";
+		player2Character = "Stannis Baratheon";
 		stannisBaratheonCard.style.filter = "grayscale(0)";
 		startGame();
 		closeOverlay();
