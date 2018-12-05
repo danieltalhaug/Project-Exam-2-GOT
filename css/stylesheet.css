@@ -107,6 +107,11 @@ h4,h5,h6,p {
 	text-align:center;
 	padding-top: 100px;
 }
+.start-text {
+	padding-top: 50px;
+	font-size: 3em;
+	transition: .5s;
+}
 .start-button {
 	box-shadow: 0 5px 20px black;
 	border: none;
