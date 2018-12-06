@@ -25,7 +25,9 @@ var characterOverlay = document.getElementById('characterSelection'),
 	debugPlayer1Char = document.getElementById('player1char'),
 	debugPlayer1Pos = document.getElementById('player1pos'),
 	debugPlayer2Char = document.getElementById('player2char'),
-	debugPlayer2Pos = document.getElementById('player2pos');
+	debugPlayer2Pos = document.getElementById('player2pos'),
+	debugArray0 = document.getElementById('array0'),
+	debugArray1 = document.getElementById('array1');
 
 var tile1 = document.getElementById('tile1'),
 	tile2 = document.getElementById('tile2'),
@@ -65,6 +67,8 @@ function debugMonitor() {
 		debugPlayer1Pos.innerHTML = "player 1 pos : " + player1Position;
 		debugPlayer2Char.innerHTML = "player 2 char: " + player2Character;
 		debugPlayer2Pos.innerHTML = "player 2 pos : " + player2Position;
+		debugArray0.innerHTML = playerPices[0];
+		debugArray1.innerHTML = playerPices[1];
 	}, 1000);
 }
 
@@ -82,17 +86,28 @@ function startGame() {
 }
 function selectHeroText() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
-		// If player1character and player2character is zero set player 1 to character
 		characterSelectText.innerHTML = "Player 1, Please select your Hero."
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
-		// if player1character is greater than zero and player2character is zero set player 2 character
 		characterSelectText.innerHTML = "Player 2, Please select your Hero."
 	}
 }
 function spawnPlayerPieces() {
-	var player1Icon = document.createElement('img');
-	player1Icon.src = playerPices[0];
+//	var player1Icon = document.createElement('img');
+//	player1Icon.src = playerPices[0];
+	var player1node = document.createElement('span');
+	var player2node = document.createElement('span');
+	var player1icon = document.createElement('img');
+	var player2icon = document.createElement('img');
+	player1icon.src = "images/icons/Robb-Stark-icon.svg";
+	player2icon.src = "images/icons/Sansa-Stark-icon.svg";
+	
+	player1node.appendChild(player1icon);
+	player1node.appendChild(player2icon);
+	
+	tile1.appendChild(player1node);
+	tile1.appendChild(player2node);
 }
+spawnPlayerPieces();
 // Character select functions. 
 function selectRobbStark() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
