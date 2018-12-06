@@ -6,6 +6,8 @@ var player1Character = "",
 var player2Character = "",
 	player2Position = 0;
 
+var playerPices = [];
+
 var robbStarkCard = document.getElementById('robbStarkCard'),
 	sansaStarkCard = document.getElementById('sansaStarkCard'),
 	aryaStarkCard = document.getElementById('aryaStarkCard'),
@@ -87,17 +89,22 @@ function selectHeroText() {
 		characterSelectText.innerHTML = "Player 2, Please select your Hero."
 	}
 }
+function spawnPlayerPieces() {
+	var player1Icon = document.createElement('img');
+	player1Icon.src = playerPices[0];
+}
 // Character select functions. 
 function selectRobbStark() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Robb Stark";
+		playerPices.push("images/icons/Robb-Stark-icon.svg");
 		robbStarkCard.style.filter = "grayscale(0)";
 		robbStarkCard.style.transform = "scale(.9)";
-		characterSelectText.innerHTML = "Player 2, Please select your Hero."
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Robb Stark";
+		playerPices.push("images/icons/Robb-Stark-icon.svg");
 		robbStarkCard.style.filter = "grayscale(0)";
 		robbStarkCard.style.transform = "scale(.9)";
 		startGame();
@@ -111,11 +118,13 @@ function selectSansaStark() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Sansa Stark";
+		playerPices.push("images/icons/Sansa-Stark-icon.svg");
 		sansaStarkCard.style.filter = "grayscale(0)";
 		sansaStarkCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Sansa Stark";
+		playerPices.push("images/icons/Sansa-Stark-icon.svg");
 		sansaStarkCard.style.filter = "grayscale(0)";
 		sansaStarkCard.style.transform = "scale(.9)";
 		startGame();

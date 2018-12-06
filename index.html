@@ -40,27 +40,9 @@
 		<section class="container">
 			<div class="game-container">
 				<div class="game-board">
+<!--					<span><img src="images/icons/Daenerys-Targarian-icon.svg" alt="icon"></span><span><img src="images/icons/Jon-Snow-icon.svg" alt="icon"></span>-->
 					<div class="tile tile--outside"></div>
-					<div class="tile tile--path"><p class="tile-count">1 Start</p></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--path"><p class="tile-count">2</p></div>
-					<div class="tile tile--path"><p class="tile-count">3</p></div>
-					<div class="tile tile--path"><p class="tile-count">4</p></div>
-					<div class="tile tile--path"><p class="tile-count">5</p></div>
-					<div class="tile tile--path"><p class="tile-count">6</p></div>
-					<div class="tile tile--trap"><p class="tile-count">7</p></div>
-					<div class="tile tile--path"><p class="tile-count">8</p></div>
-					<div class="tile tile--path"><p class="tile-count">9</p></div>
-					<div class="tile tile--path"><p class="tile-count">10</p></div>
+					<div class="tile tile--path" id="tile1"><p class="tile-count">1 Start</p></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
@@ -71,21 +53,15 @@
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
-					<div class="tile tile--path"><p class="tile-count">11</p></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--path"><p class="tile-count">20</p></div>
-					<div class="tile tile--trap"><p class="tile-count">19</p></div>
-					<div class="tile tile--path"><p class="tile-count">18</p></div>
-					<div class="tile tile--path"><p class="tile-count">17</p></div>
-					<div class="tile tile--path"><p class="tile-count">16</p></div>
-					<div class="tile tile--path"><p class="tile-count">15</p></div>
-					<div class="tile tile--path"><p class="tile-count">14</p></div>
-					<div class="tile tile--trap"><p class="tile-count">13</p></div>
-					<div class="tile tile--path"><p class="tile-count">12</p></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--outside"></div>
-					<div class="tile tile--path"><p class="tile-count">21</p></div>
+					<div class="tile tile--path" id="tile2"><p class="tile-count">2</p></div>
+					<div class="tile tile--path" id="tile3"><p class="tile-count">3</p></div>
+					<div class="tile tile--path" id="tile4"><p class="tile-count">4</p></div>
+					<div class="tile tile--path" id="tile5"><p class="tile-count">5</p></div>
+					<div class="tile tile--path" id="tile6"><p class="tile-count">6</p></div>
+					<div class="tile tile--trap" id="tile7"><p class="tile-count">7</p></div>
+					<div class="tile tile--path" id="tile8"><p class="tile-count">8</p></div>
+					<div class="tile tile--path" id="tile9"><p class="tile-count">9</p></div>
+					<div class="tile tile--path" id="tile10"><p class="tile-count">10</p></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
@@ -96,15 +72,40 @@
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
-					<div class="tile tile--path"><p class="tile-count">22</p></div>
-					<div class="tile tile--path"><p class="tile-count">23</p></div>
-					<div class="tile tile--path"><p class="tile-count">24</p></div>
-					<div class="tile tile--path"><p class="tile-count">25</p></div>
-					<div class="tile tile--trap"><p class="tile-count">26</p></div>
-					<div class="tile tile--path"><p class="tile-count">27</p></div>
-					<div class="tile tile--path"><p class="tile-count">28</p></div>
-					<div class="tile tile--path"><p class="tile-count">29</p></div>
-					<div class="tile tile--path"><p class="tile-count">30 End</p></div>
+					<div class="tile tile--path" id="tile11"><p class="tile-count">11</p></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--path" id="tile20"><p class="tile-count">20</p></div>
+					<div class="tile tile--trap" id="tile19"><p class="tile-count">19</p></div>
+					<div class="tile tile--path" id="tile18"><p class="tile-count">18</p></div>
+					<div class="tile tile--path" id="tile17"><p class="tile-count">17</p></div>
+					<div class="tile tile--path" id="tile16"><p class="tile-count">16</p></div>
+					<div class="tile tile--path" id="tile15"><p class="tile-count">15</p></div>
+					<div class="tile tile--path" id="tile14"><p class="tile-count">14</p></div>
+					<div class="tile tile--trap" id="tile13"><p class="tile-count">13</p></div>
+					<div class="tile tile--path" id="tile12"><p class="tile-count">12</p></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--path" id="tile21"><p class="tile-count">21</p></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--outside"></div>
+					<div class="tile tile--path" id="tile22"><p class="tile-count">22</p></div>
+					<div class="tile tile--path" id="tile23"><p class="tile-count">23</p></div>
+					<div class="tile tile--path" id="tile24"><p class="tile-count">24</p></div>
+					<div class="tile tile--path" id="tile25"><p class="tile-count">25</p></div>
+					<div class="tile tile--trap" id="tile26"><p class="tile-count">26</p></div>
+					<div class="tile tile--path" id="tile27"><p class="tile-count">27</p></div>
+					<div class="tile tile--path" id="tile28"><p class="tile-count">28</p></div>
+					<div class="tile tile--path" id="tile29"><p class="tile-count">29</p></div>
+					<div class="tile tile--path" id="tile30"><p class="tile-count">30 End</p></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>
 					<div class="tile tile--outside"></div>

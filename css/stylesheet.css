@@ -115,7 +115,14 @@ h4,h5,h6,p {
 	padding-top: 5px;
 	text-shadow: 2px 2px black;
 }
-
+.tile span {
+	padding: 5px;
+}
+.tile span img {
+	width: 30px;
+	height: 30px;
+	filter: drop-shadow( 0 3px 3px #000 );
+}
 .button-container {
 	text-align:center;
 	padding-top: 100px;
