@@ -94,6 +94,11 @@ function selectHeroText() {
 function spawnPlayerPieces() {
 //	var player1Icon = document.createElement('img');
 //	player1Icon.src = playerPices[0];
+	
+	// Mulig at det ikke fungerer å bruke array her fordi funksjonen er callet før 
+	// array har fått to src path fra valgte karakterer. Sjekk også zindex på overlay for å hindre ikonene å
+	// bli plassert oppå start overlay
+	
 	var player1node = document.createElement('span');
 	var player2node = document.createElement('span');
 	var player1icon = document.createElement('img');
@@ -153,11 +158,13 @@ function selectAryaStark() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Arya Stark";
+		playerPices.push("images/icons/Arya-Stark-icon.svg");
 		aryaStarkCard.style.filter = "grayscale(0)";
 		aryaStarkCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Arya Stark";
+		playerPices.push("images/icons/Arya-Stark-icon.svg");
 		aryaStarkCard.style.filter = "grayscale(0)";
 		aryaStarkCard.style.transform = "scale(.9)";
 		startGame();
@@ -171,11 +178,13 @@ function selectJonSnow() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Jon Snow";
+		playerPices.push("images/icons/Jon-Snow-icon.svg");
 		jonSnowCard.style.filter = "grayscale(0)";
 		jonSnowCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Jon Snow";
+		playerPices.push("images/icons/Jon-Snow-icon.svg");
 		jonSnowCard.style.filter = "grayscale(0)";
 		jonSnowCard.style.transform = "scale(.9)";
 		startGame();
@@ -189,11 +198,13 @@ function selectTheonGreyjoy() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Theon Greyjoy";
+		playerPices.push("images/icons/Theon-Greyjoy-icon.svg");
 		theonGreyjoyCard.style.filter = "grayscale(0)";
 		theonGreyjoyCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Theon Greyjoy";
+		playerPices.push("images/icons/Theon-Greyjoy-icon.svg");
 		theonGreyjoyCard.style.filter = "grayscale(0)";
 		theonGreyjoyCard.style.transform = "scale(.9)";
 		startGame();
@@ -207,11 +218,13 @@ function selectTyrionLannister() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Tyrion Lannister";
+		playerPices.push("images/icons/Tyrion-Lannister-icon.svg");
 		tyrionLannisterCard.style.filter = "grayscale(0)";
 		tyrionLannisterCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Tyrion Lannister";
+		playerPices.push("images/icons/Tyrion-Lannister-icon.svg");
 		tyrionLannisterCard.style.filter = "grayscale(0)";
 		tyrionLannisterCard.style.transform = "scale(.9)";
 		startGame();
@@ -225,11 +238,13 @@ function selectStannisBaratheon() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Stannis Baratheon";
+		playerPices.push("images/icons/Stannis-Baratheon-icon.svg");
 		stannisBaratheonCard.style.filter = "grayscale(0)";
 		stannisBaratheonCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Stannis Baratheon";
+		playerPices.push("images/icons/Stannis-Baratheon-icon.svg");
 		stannisBaratheonCard.style.filter = "grayscale(0)";
 		stannisBaratheonCard.style.transform = "scale(.9)";
 		startGame();
@@ -243,11 +258,13 @@ function selectDavosSeaworth() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Davos Seaworth";
+		playerPices.push("images/icons/Davos-Seaworth-icon.svg");
 		davosSeaworthCard.style.filter = "grayscale(0)";
 		davosSeaworthCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Davos Seaworth";
+		playerPices.push("images/icons/Davos-Seaworth-icon.svg");
 		davosSeaworthCard.style.filter = "grayscale(0)";
 		davosSeaworthCard.style.transform = "scale(.9)";
 		startGame();
@@ -261,11 +278,13 @@ function selectDaenerysTargaryen() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Daenerys Targaryen";
+		playerPices.push("images/icons/Daenerys-Targaryen-icon.svg");
 		daenerysTargaryenCard.style.filter = "grayscale(0)";
 		daenerysTargaryenCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Daenerys Targaryen";
+		playerPices.push("images/icons/Daenerys-Targaryen-icon.svg");
 		daenerysTargaryenCard.style.filter = "grayscale(0)";
 		daenerysTargaryenCard.style.transform = "scale(.9)";
 		startGame();
@@ -279,11 +298,13 @@ function selectViserysTargaryen() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
 		player1Character = "Viserys Targaryen";
+		playerPices.push("images/icons/Viserys-Targaryen-icon.svg");
 		viserysTargaryenCard.style.filter = "grayscale(0)";
 		viserysTargaryenCard.style.transform = "scale(.9)";
 	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 		// if player1character is greater than zero and player2character is zero set player 2 character
 		player2Character = "Viserys Targaryen";
+		playerPices.push("images/icons/Viserys-Targaryen-icon.svg");
 		viserysTargaryenCard.style.filter = "grayscale(0)";
 		viserysTargaryenCard.style.transform = "scale(.9)";
 		startGame();
