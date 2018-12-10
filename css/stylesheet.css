@@ -23,6 +23,7 @@ h4,h5,h6,p {
 	
 }
 .debug-box {
+	display: none;
 	position: absolute;
 	top: 0px;
 	left: 0px;

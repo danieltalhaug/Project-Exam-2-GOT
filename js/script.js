@@ -7,7 +7,8 @@ var player2Character = "",
 	player2Position = 0;
 
 // playerPieces gets it's content from the selectCharacter functions when pressed. The content is used in the spawnPlayer1&2Piece functions. 
-var playerPieces = [];
+var playerPieces = [],
+	enableDebug = true;
 
 var robbStarkCard = document.getElementById('robbStarkCard'),
 	sansaStarkCard = document.getElementById('sansaStarkCard'),
@@ -23,6 +24,7 @@ var robbStarkCard = document.getElementById('robbStarkCard'),
 var characterOverlay = document.getElementById('characterSelection'),
 	startingGametTxt = document.getElementById('startingGametTxt'),
 	characterSelectText = document.getElementById('characterSelectText'),
+	debugBox = document.getElementById('debugBox'),
 	debugPlayer1Char = document.getElementById('player1char'),
 	debugPlayer1Pos = document.getElementById('player1pos'),
 	debugPlayer2Char = document.getElementById('player2char'),
@@ -63,16 +65,22 @@ var tile1 = document.getElementById('tile1'),
 
 // Feed debug box with information. This updates itself every 1 second. 
 function debugMonitor() {
-	setInterval(function(){
-		debugPlayer1Char.innerHTML = "player 1 char: " + player1Character;
-		debugPlayer1Pos.innerHTML = "player 1 pos : " + player1Position;
-		debugPlayer2Char.innerHTML = "player 2 char: " + player2Character;
-		debugPlayer2Pos.innerHTML = "player 2 pos : " + player2Position;
-		debugArray0.innerHTML = playerPieces[0];
-		debugArray1.innerHTML = playerPieces[1];
-	}, 1000);
+	debugPlayer1Char.innerHTML = "player 1 char: " + player1Character;
+	debugPlayer1Pos.innerHTML = "player 1 pos : " + player1Position;
+	debugPlayer2Char.innerHTML = "player 2 char: " + player2Character;
+	debugPlayer2Pos.innerHTML = "player 2 pos : " + player2Position;
+	debugArray0.innerHTML = playerPieces[0];
+	debugArray1.innerHTML = playerPieces[1];
 }
-
+// 
+function enableDebugMonitor() {
+	if (enableDebug === true) {
+		debugBox.style.display = "block";
+		debugMonitor();
+	} else {
+		debugBox.style.display = "none";
+	}
+}
 // Closes the Character selection overlay
 function closeOverlay() {
 	setTimeout(function() {
@@ -91,13 +99,11 @@ function startGame() {
 }
 // Adds instructions to the player selection overlay based on the length of the player1 and player 2 character variables. 
 function selectHeroText() {
-	setInterval(function() {
-		if ((player1Character.length === 0) && (player2Character.length === 0)) {
+	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 			characterSelectText.innerHTML = "Player 1, Please select your Hero."
 		} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 			characterSelectText.innerHTML = "Player 2, Please select your Hero."
 		}
-	},500)
 }
 // Character select functions. These checks if the player1 and player2 character variables are empty
 // if they are then they will be set to a character. When a character tile is pressed the tile will change from
@@ -303,8 +309,8 @@ function selectViserysTargaryen() {
 		return
 	}
 }
-// Spawns in the player pieces based on the image paths that are pushed from selectCharacter functions. 
-// These two functions could probably be a lot shorter. 
+// Spawns in and moves the player pieces based on player 1 and 2 position. The function uses the playerPieces array 
+// to spawn in the selected characters icons. 
 function spawnPlayer1Piece() {	
 	var player1node = document.createElement('span');
 	var player1icon = document.createElement('img');
@@ -504,7 +510,14 @@ function spawnPlayer2Piece() {
 			}
 	}, 1000)
 }
+// Functions called in the gameLoop function will run over and over. 
+function gameLoop() {
+	setInterval(function() {
+		selectHeroText();
+		enableDebugMonitor();
+		debugMonitor();
+	}, 500)
+}
 
 // Call functions here
-selectHeroText();
-debugMonitor();
+gameLoop();
