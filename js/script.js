@@ -30,7 +30,9 @@ var characterOverlay = document.getElementById('characterSelection'),
 	debugPlayer2Char = document.getElementById('player2char'),
 	debugPlayer2Pos = document.getElementById('player2pos'),
 	debugArray0 = document.getElementById('array0'),
-	debugArray1 = document.getElementById('array1');
+	debugArray1 = document.getElementById('array1'),
+	headerInfo = document.getElementById('headerInfo'),
+	trapText = document.getElementById('trapInfo');
 
 var tile1 = document.getElementById('tile1'),
 	tile2 = document.getElementById('tile2'),
@@ -63,6 +65,28 @@ var tile1 = document.getElementById('tile1'),
 	tile29 = document.getElementById('tile29'),
 	tile30 = document.getElementById('tile30');
 
+var traps = {
+	trap7: {
+		title		: "Frostbite!",
+		description	: "It's too cold in the north. Your army is freezing and soldiers are getting frostbite. Some soldiers had to have their toes and fingers removed. Take two steps back.",
+		punishment	: 2
+	},
+	trap13: {
+		title		: "Rough Seas",
+		description	: "The seas cannot be tamed. Strong winds and high waves caused some of your ships to crash and sink. Take four steps back.",
+		punishment	: 4
+	},
+	trap19: {
+		title		: "Greyscale!",
+		description	: "Some men contracted Greyscale while making their way through the swamp. There is no time to find a cure and the soldiers had to be shunned. Take three steps back.",
+		punishment	: 3
+	},
+	trap26: {
+		title		: "Starvation!",
+		description	: "It's so hot that your food supplies has started to rotten. Some soldiers decided to eat anyways and got sick while the rest refused and are now starving. Take five steps back.",
+		punishment	: 5
+	}
+};
 // Feed debug box with information. This updates itself every 1 second. 
 function debugMonitor() {
 	debugPlayer1Char.innerHTML = "player 1 char: " + player1Character;
@@ -72,7 +96,7 @@ function debugMonitor() {
 	debugArray0.innerHTML = playerPieces[0];
 	debugArray1.innerHTML = playerPieces[1];
 }
-// 
+// Checks if the enableDebug variable is set to true. If it is the gameBox display is set to block, if not it's set to none. 
 function enableDebugMonitor() {
 	if (enableDebug === true) {
 		debugBox.style.display = "block";
