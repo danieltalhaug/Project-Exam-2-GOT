@@ -49,6 +49,7 @@ h4,h5,h6,p {
 
 .overlay--background {
 	background-color: #12293b;
+	z-index: 20;
 }
 .overlay--victory {
 	transform: translateY(-4000px);
