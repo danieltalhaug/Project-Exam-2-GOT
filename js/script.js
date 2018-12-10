@@ -129,7 +129,8 @@ function selectHeroText() {
 			characterSelectText.innerHTML = "Player 2, Please select your Hero."
 		}
 }
-// Displays text and moves gamepieces based on position. Information comes from the traps object. 
+// Displays text and moves gamepieces based on position. Information comes from the traps object.
+// I tried to subtract traps.trap7.punishment from player1&2position but it wouldn't work.
 function trapTiles() {
 	if (player1Position === 7) {
 		trapText.innerHTML = traps.trap7.title + " " + traps.trap7.description;
