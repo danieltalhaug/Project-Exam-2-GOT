@@ -6,6 +6,7 @@ var player1Character = "",
 var player2Character = "",
 	player2Position = 0;
 
+// playerPieces gets it's content from the selectCharacter functions when pressed. The content is used in the spawnPlayer1&2Piece functions. 
 var playerPieces = [];
 
 var robbStarkCard = document.getElementById('robbStarkCard'),
@@ -79,36 +80,29 @@ function closeOverlay() {
 		characterOverlay.style.transform = "translateY(-4000px)";
 	}, 2000)
 }
+// Starts the game by adding the starting game text line to the character selection overlay,
+// sets the player 1 and 2 position to 1 and calls the spawnplayer1 and 2 piece functions. 
 function startGame() {
 	startingGametTxt.innerHTML = "Starting Game";
 	player1Position = 1;
 	player2Position = 1;
-	spawnPlayerPieces();
+	spawnPlayer1Piece();
+	spawnPlayer2Piece();
 }
+// Adds instructions to the player selection overlay based on the length of the player1 and player 2 character variables. 
 function selectHeroText() {
-	if ((player1Character.length === 0) && (player2Character.length === 0)) {
-		characterSelectText.innerHTML = "Player 1, Please select your Hero."
-	} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
-		characterSelectText.innerHTML = "Player 2, Please select your Hero."
-	}
+	setInterval(function() {
+		if ((player1Character.length === 0) && (player2Character.length === 0)) {
+			characterSelectText.innerHTML = "Player 1, Please select your Hero."
+		} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
+			characterSelectText.innerHTML = "Player 2, Please select your Hero."
+		}
+	},500)
 }
-// Spawns in the player pieces based on the image paths that are pushed from selectCharacter functions. 
-
-function spawnPlayerPieces() {	
-	var player1node = document.createElement('span');
-	var player2node = document.createElement('span');
-	var player1icon = document.createElement('img');
-	var player2icon = document.createElement('img');
-	player1icon.src = playerPieces[0];
-	player2icon.src = playerPieces[1];
-	
-	player1node.appendChild(player1icon);
-	player1node.appendChild(player2icon);
-	
-	tile1.appendChild(player1node);
-	tile1.appendChild(player2node);
-}
-// Character select functions. 
+// Character select functions. These checks if the player1 and player2 character variables are empty
+// if they are then they will be set to a character. When a character tile is pressed the tile will change from
+// grayscale to coloured and the image path for the game piece icons gets pushed into the playerPieces array so that the
+// Icons can spawn in on the game board. If both player 1 and player 2 variables are empty then nothing will happen. 
 function selectRobbStark() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 		// If player1character and player2character is zero set player 1 to character
@@ -308,6 +302,207 @@ function selectViserysTargaryen() {
 		// Do nothing
 		return
 	}
+}
+// Spawns in the player pieces based on the image paths that are pushed from selectCharacter functions. 
+// These two functions could probably be a lot shorter. 
+function spawnPlayer1Piece() {	
+	var player1node = document.createElement('span');
+	var player1icon = document.createElement('img');
+	player1icon.src = playerPieces[0];
+	player1node.appendChild(player1icon);
+	tile1.appendChild(player1node);
+	
+	setInterval(function() {
+		if (player1Position === 1) {
+				tile1.appendChild(player1node);
+			}
+		if (player1Position === 2) {
+				tile2.appendChild(player1node);
+			}
+		if (player1Position === 3) {
+				tile3.appendChild(player1node);
+			}
+		if (player1Position === 4) {
+				tile4.appendChild(player1node);
+			}
+		if (player1Position === 5) {
+				tile5.appendChild(player1node);
+			}
+		if (player1Position === 6) {
+				tile6.appendChild(player1node);
+			}
+		if (player1Position === 7) {
+				tile7.appendChild(player1node);
+			}
+		if (player1Position === 8) {
+				tile8.appendChild(player1node);
+			}
+		if (player1Position === 10) {
+				tile9.appendChild(player1node);
+			}
+		if (player1Position === 11) {
+				tile10.appendChild(player1node);
+			}
+		if (player1Position === 12) {
+				tile11.appendChild(player1node);
+			}
+		if (player1Position === 13) {
+				tile12.appendChild(player1node);
+			}
+		if (player1Position === 14) {
+				tile13.appendChild(player1node);
+			}
+		if (player1Position === 15) {
+				tile14.appendChild(player1node);
+			}
+		if (player1Position === 16) {
+				tile15.appendChild(player1node);
+			}
+		if (player1Position === 17) {
+				tile16.appendChild(player1node);
+			}
+		if (player1Position === 18) {
+				tile17.appendChild(player1node);
+			}
+		if (player1Position === 19) {
+				tile18.appendChild(player1node);
+			}
+		if (player1Position === 20) {
+				tile19.appendChild(player1node);
+			}
+		if (player1Position === 20) {
+				tile20.appendChild(player1node);
+			}
+		if (player1Position === 21) {
+				tile21.appendChild(player1node);
+			}
+		if (player1Position === 22) {
+				tile22.appendChild(player1node);
+			}
+		if (player1Position === 23) {
+				tile23.appendChild(player1node);
+			}
+		if (player1Position === 24) {
+				tile24.appendChild(player1node);
+			}
+		if (player1Position === 25) {
+				tile25.appendChild(player1node);
+			}
+		if (player1Position === 26) {
+				tile26.appendChild(player1node);
+			}
+		if (player1Position === 27) {
+				tile27.appendChild(player1node);
+			}
+		if (player1Position === 28) {
+				tile28.appendChild(player1node);
+			}
+		if (player1Position === 29) {
+				tile29.appendChild(player1node);
+			}
+		if (player1Position === 30) {
+				tile30.appendChild(player1node);
+			}
+	}, 1000)
+}
+function spawnPlayer2Piece() {
+	var player2node = document.createElement('span');
+	var player2icon = document.createElement('img');
+	player2icon.src = playerPieces[1];
+	player2node.appendChild(player2icon);
+	
+	setInterval(function() {
+		if (player2Position === 1) {
+				tile1.appendChild(player2node);
+			}
+		if (player2Position === 2) {
+				tile2.appendChild(player2node);
+			}
+		if (player2Position === 3) {
+				tile3.appendChild(player2node);
+			}
+		if (player2Position === 4) {
+				tile4.appendChild(player2node);
+			}
+		if (player2Position === 5) {
+				tile5.appendChild(player2node);
+			}
+		if (player2Position === 6) {
+				tile6.appendChild(player2node);
+			}
+		if (player2Position === 7) {
+				tile7.appendChild(player2node);
+			}
+		if (player2Position === 8) {
+				tile8.appendChild(player2node);
+			}
+		if (player2Position === 10) {
+				tile9.appendChild(player2node);
+			}
+		if (player2Position === 11) {
+				tile10.appendChild(player2node);
+			}
+		if (player2Position === 12) {
+				tile11.appendChild(player2node);
+			}
+		if (player2Position === 13) {
+				tile12.appendChild(player2node);
+			}
+		if (player2Position === 14) {
+				tile13.appendChild(player2node);
+			}
+		if (player2Position === 15) {
+				tile14.appendChild(player2node);
+			}
+		if (player2Position === 16) {
+				tile15.appendChild(player2node);
+			}
+		if (player2Position === 17) {
+				tile16.appendChild(player2node);
+			}
+		if (player2Position === 18) {
+				tile17.appendChild(player2node);
+			}
+		if (player2Position === 19) {
+				tile18.appendChild(player2node);
+			}
+		if (player2Position === 20) {
+				tile19.appendChild(player2node);
+			}
+		if (player2Position === 20) {
+				tile20.appendChild(player2node);
+			}
+		if (player2Position === 21) {
+				tile21.appendChild(player2node);
+			}
+		if (player2Position === 22) {
+				tile22.appendChild(player2node);
+			}
+		if (player2Position === 23) {
+				tile23.appendChild(player2node);
+			}
+		if (player2Position === 24) {
+				tile24.appendChild(player2node);
+			}
+		if (player2Position === 25) {
+				tile25.appendChild(player2node);
+			}
+		if (player2Position === 26) {
+				tile26.appendChild(player2node);
+			}
+		if (player2Position === 27) {
+				tile27.appendChild(player2node);
+			}
+		if (player2Position === 28) {
+				tile28.appendChild(player2node);
+			}
+		if (player2Position === 29) {
+				tile29.appendChild(player2node);
+			}
+		if (player2Position === 30) {
+				tile30.appendChild(player2node);
+			}
+	}, 1000)
 }
 
 // Call functions here
