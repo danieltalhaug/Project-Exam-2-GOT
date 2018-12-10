@@ -129,6 +129,57 @@ function selectHeroText() {
 			characterSelectText.innerHTML = "Player 2, Please select your Hero."
 		}
 }
+// Displays text and moves gamepieces based on position. Information comes from the traps object. 
+function trapTiles() {
+	if (player1Position === 7) {
+		trapText.innerHTML = traps.trap7.title + " " + traps.trap7.description;
+		setTimeout(function() {
+			player1Position = 5;
+		},1500)
+	}
+	if (player1Position === 13) {
+		trapText.innerHTML = traps.trap13.title + " " + traps.trap13.description;
+		setTimeout(function() {
+			player1Position = 9;
+		},1500)
+	}
+	if (player1Position === 19) {
+		trapText.innerHTML = traps.trap19.title + " " + traps.trap19.description;
+		setTimeout(function() {
+			player1Position = 16;
+		},1500)
+	}
+	if (player1Position === 26) {
+		trapText.innerHTML = traps.trap26.title + " " + traps.trap26.description;
+		setTimeout(function() {
+			player1Position = 21;
+		},1500)
+	}
+		if (player2Position === 7) {
+		trapText.innerHTML = traps.trap7.title + " " + traps.trap7.description;
+		setTimeout(function() {
+			player2Position = 5;
+		},1500)
+	}
+	if (player2Position === 13) {
+		trapText.innerHTML = traps.trap13.title + " " + traps.trap13.description;
+		setTimeout(function() {
+			player2Position = 9;
+		},1500)
+	}
+	if (player2Position === 19) {
+		trapText.innerHTML = traps.trap19.title + " " + traps.trap19.description;
+		setTimeout(function() {
+			player2Position = 16;
+		},1500)
+	}
+	if (player2Position === 26) {
+		trapText.innerHTML = traps.trap26.title + " " + traps.trap26.description;
+		setTimeout(function() {
+			player2Position = 21;
+		},1500)
+	}
+}
 // Character select functions. These checks if the player1 and player2 character variables are empty
 // if they are then they will be set to a character. When a character tile is pressed the tile will change from
 // grayscale to coloured and the image path for the game piece icons gets pushed into the playerPieces array so that the
@@ -367,37 +418,37 @@ function spawnPlayer1Piece() {
 		if (player1Position === 8) {
 				tile8.appendChild(player1node);
 			}
-		if (player1Position === 10) {
+		if (player1Position === 9) {
 				tile9.appendChild(player1node);
 			}
-		if (player1Position === 11) {
+		if (player1Position === 10) {
 				tile10.appendChild(player1node);
 			}
-		if (player1Position === 12) {
+		if (player1Position === 11) {
 				tile11.appendChild(player1node);
 			}
-		if (player1Position === 13) {
+		if (player1Position === 12) {
 				tile12.appendChild(player1node);
 			}
-		if (player1Position === 14) {
+		if (player1Position === 13) {
 				tile13.appendChild(player1node);
 			}
-		if (player1Position === 15) {
+		if (player1Position === 14) {
 				tile14.appendChild(player1node);
 			}
-		if (player1Position === 16) {
+		if (player1Position === 15) {
 				tile15.appendChild(player1node);
 			}
-		if (player1Position === 17) {
+		if (player1Position === 16) {
 				tile16.appendChild(player1node);
 			}
-		if (player1Position === 18) {
+		if (player1Position === 17) {
 				tile17.appendChild(player1node);
 			}
-		if (player1Position === 19) {
+		if (player1Position === 18) {
 				tile18.appendChild(player1node);
 			}
-		if (player1Position === 20) {
+		if (player1Position === 19) {
 				tile19.appendChild(player1node);
 			}
 		if (player1Position === 20) {
@@ -466,37 +517,37 @@ function spawnPlayer2Piece() {
 		if (player2Position === 8) {
 				tile8.appendChild(player2node);
 			}
-		if (player2Position === 10) {
+		if (player2Position === 9) {
 				tile9.appendChild(player2node);
 			}
-		if (player2Position === 11) {
+		if (player2Position === 10) {
 				tile10.appendChild(player2node);
 			}
-		if (player2Position === 12) {
+		if (player2Position === 11) {
 				tile11.appendChild(player2node);
 			}
-		if (player2Position === 13) {
+		if (player2Position === 12) {
 				tile12.appendChild(player2node);
 			}
-		if (player2Position === 14) {
+		if (player2Position === 13) {
 				tile13.appendChild(player2node);
 			}
-		if (player2Position === 15) {
+		if (player2Position === 14) {
 				tile14.appendChild(player2node);
 			}
-		if (player2Position === 16) {
+		if (player2Position === 15) {
 				tile15.appendChild(player2node);
 			}
-		if (player2Position === 17) {
+		if (player2Position === 16) {
 				tile16.appendChild(player2node);
 			}
-		if (player2Position === 18) {
+		if (player2Position === 17) {
 				tile17.appendChild(player2node);
 			}
-		if (player2Position === 19) {
+		if (player2Position === 18) {
 				tile18.appendChild(player2node);
 			}
-		if (player2Position === 20) {
+		if (player2Position === 19) {
 				tile19.appendChild(player2node);
 			}
 		if (player2Position === 20) {
@@ -540,6 +591,7 @@ function gameLoop() {
 		selectHeroText();
 		enableDebugMonitor();
 		debugMonitor();
+		trapTiles();
 	}, 500)
 }
 
