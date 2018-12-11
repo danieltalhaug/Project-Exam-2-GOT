@@ -1,10 +1,13 @@
 // JavaScript Document
 
 var player1Character = "",
-	player1Position = 0;
+	player1Position = 0,
+	player1Throws = 0;
+
 
 var player2Character = "",
-	player2Position = 0;
+	player2Position = 0,
+	player2Throws = 0;
 
 // playerPieces gets it's content from the selectCharacter functions when pressed. The content is used in the spawnPlayer1&2Piece functions. 
 var playerPieces = [],
@@ -32,7 +35,8 @@ var characterOverlay = document.getElementById('characterSelection'),
 	debugArray0 = document.getElementById('array0'),
 	debugArray1 = document.getElementById('array1'),
 	headerInfo = document.getElementById('headerInfo'),
-	trapText = document.getElementById('trapInfo');
+	trapText = document.getElementById('trapInfo'),
+	dice = document.getElementById('dice');
 
 var tile1 = document.getElementById('tile1'),
 	tile2 = document.getElementById('tile2'),
@@ -120,6 +124,32 @@ function startGame() {
 	player2Position = 1;
 	spawnPlayer1Piece();
 	spawnPlayer2Piece();
+}
+
+// Rolls a dice and moves the players on the board. 
+function rollDice() {
+	var randomNumber = Math.floor(Math.random() * 6) + 1;
+	var dice = document.getElementById('dice');
+	dice.innerHTML = randomNumber;
+	if (player1Throws === player2Throws) {
+		player1Position = player1Position + randomNumber;
+		if(randomNumber != 6) {
+			player1Throws++;
+		}
+	} else {
+		if (player1Throws > player2Throws) {
+			player2Position = player2Position + randomNumber;
+			if(randomNumber != 6) {
+				player2Throws++;
+			}
+		}
+		if(player1Position >= 30) {
+			player1Position = 30;
+		}
+		if(player2Position >= 30) {
+			player2Position = 30;
+		}
+	}
 }
 // Adds instructions to the player selection overlay based on the length of the player1 and player 2 character variables. 
 function selectHeroText() {
