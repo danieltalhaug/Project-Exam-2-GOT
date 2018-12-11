@@ -6,18 +6,14 @@
 		<link href="https://fonts.googleapis.com/css?family=Cinzel|Scheherazade" rel="stylesheet">
 		<link rel="stylesheet" href="css/stylesheet.css">
 	</head>
-	
 	<body>
 		<section id="characterSelection" class="[ overlay overlay--background ]">
-			
 			<figure>
 				<img class="[ center overlay--logo ]" src="images/logo/GOT-logo.png" alt="The march on King's Landing logo">
 			</figure><!-- Logo end -->
-			
 			<div class="[ info-container ]">
 				<h2 id="characterSelectText"></h2>
 			</div><!-- Info box end -->
-			
 			<div class="[ center overlay--cards ]">
 				<div id="robbStarkCard" class="[ card card--background_robb ]" onClick="selectRobbStark()"></div>
 				<div id="sansaStarkCard" class="[ card card--background_sansa ]" onClick="selectSansaStark()"></div>
@@ -30,13 +26,10 @@
 				<div id="daenerysTargaryenCard" class="[ card card--background_daenerys ]" onClick="selectDaenerysTargaryen()"></div>
 				<div id="viserysTargaryenCard" class="[ card card--background_viserys ]" onClick="selectViserysTargaryen()"></div>
 			</div><!-- Overlay cards end -->
-			
 			<div class="info-container start-text">
 				<h2 id="startingGametTxt"></h2>
 			</div><!-- start text box end -->
-			
 		</section><!-- Character Selection Overlay end -->
-		
 		<section class="container">
 			<div class="game-container">
 				<div class="game-board">
@@ -131,17 +124,16 @@
 				</div><!-- Game box end-->
 			</div><!-- Game container end -->
 		</section><!-- Board game end -->
-				
-		<section class="[ overlay overlay--background overlay--victory ]">
+		<section id="victoryScreen" class="[ overlay overlay--background overlay--victory ]">
 			<figure>
 				<img class="[ center overlay--logo ]" src="images/logo/GOT-logo.png" alt="The march on King's Landing logo">
 			</figure><!-- Logo end -->
 			
 			<div class="info-container">
-				<h2 class="pulsate">Congratulations Player 1</h2>
+				<h2 id="victoryHeader" class="pulsate"></h2>
 			</div><!-- info container end -->
 			<div class="info-text">
-				<p id="victoryText">You have successfully made it to King's Landing and decapitated Cersei Lannister the Queen Regent. Now the throne is yours for the taking.</p>
+				<p id="victoryText">You have successfully made it to King's Landing and decapitated Cersei Lannister the Queen Regent. The throne is yours for the taking.</p>
 			</div>
 		</section><!-- Victory Overlay end -->
 		<div id="debugBox" class="debug-box">
@@ -153,7 +145,7 @@
 				<li id="array0"></li>
 				<li id="array1"></li>
 			</ul>
-		</div>
+		</div><!-- Debug box end -->
 		<script src="js/apiscript.js"></script>
 		<script src="js/script.js"></script>
 	</body>

@@ -14,7 +14,9 @@ var playerPieces = [],
 	enableDebug = true;
 
 var characterOverlay = document.getElementById('characterSelection'),
+	victoryOverlay = document.getElementById('victoryScreen'),
 	startingGametTxt = document.getElementById('startingGametTxt'),
+	victoryHeader = document.getElementById('victoryHeader'),
 	characterSelectText = document.getElementById('characterSelectText'),
 	debugBox = document.getElementById('debugBox'),
 	debugPlayer1Char = document.getElementById('player1char'),
@@ -105,6 +107,12 @@ function closeOverlay() {
 		characterOverlay.style.transform = "translateY(-4000px)";
 	}, 2000)
 }
+function openVictoryOverlay() {
+	setTimeout(function() {
+		// moves the overlay down to 0 pixels
+		victoryOverlay.style.transform = "translateY(0)";
+	}, 2000)
+}
 // Starts the game by adding the starting game text line to the character selection overlay,
 // sets the player 1 and 2 position to 1 and calls the spawnplayer1 and 2 piece functions. 
 function startGame() {
@@ -160,10 +168,14 @@ function controlGameText() {
 	}
 	if (player1Position >= 30) {
 		headerInfo.innerHTML = "Player 1, Wins the game!";
+		victoryHeader.innerHTML = "Congratulations Player 1!"
 		player1Position = 30;
+		openVictoryOverlay();
 	} else if (player2Position >= 30) {
 		headerInfo.innerHTML = "Player 2, Wins the game!";
+		victoryHeader.innerHTML = "Congratulations Player 2!"
 		player2Position = 30;
+		openVictoryOverlay();
 	}
 }
 // Clears the content of the trapText ID. Function is called in rollDice() on every click. 
@@ -171,55 +183,54 @@ function clearTrapText() {
 	trapText.innerHTML = "";
 }
 // Displays text and moves gamepieces based on position. Information comes from the traps object.
-// I tried to subtract traps.trap7.punishment from player1&2position but it wouldn't work.
 function trapTiles() {
 	if (player1Position === 7) {
 		trapText.innerHTML = traps.trap7.title + " " + traps.trap7.description;
 		setTimeout(function() {
-			player1Position = 5;
-		},1500)
+			player1Position = player1Position - traps.trap7.punishment;
+		},100)
 	}
 	if (player1Position === 13) {
 		trapText.innerHTML = traps.trap13.title + " " + traps.trap13.description;
 		setTimeout(function() {
-			player1Position = 9;
-		},1500)
+			player1Position = player1Position - traps.trap13.punishment;
+		},100)
 	}
 	if (player1Position === 19) {
 		trapText.innerHTML = traps.trap19.title + " " + traps.trap19.description;
 		setTimeout(function() {
-			player1Position = 16;
-		},1500)
+			player1Position = player1Position - traps.trap19.punishment;
+		},100)
 	}
 	if (player1Position === 26) {
 		trapText.innerHTML = traps.trap26.title + " " + traps.trap26.description;
 		setTimeout(function() {
-			player1Position = 21;
-		},1500)
+			player1Position = player1Position - traps.trap26.punishment;
+		},100)
 	}
 		if (player2Position === 7) {
 		trapText.innerHTML = traps.trap7.title + " " + traps.trap7.description;
 		setTimeout(function() {
-			player2Position = 5;
-		},1500)
+			player2Position = player2Position - traps.trap7.punishment;
+		},100)
 	}
 	if (player2Position === 13) {
 		trapText.innerHTML = traps.trap13.title + " " + traps.trap13.description;
 		setTimeout(function() {
-			player2Position = 9;
-		},1500)
+			player2Position = player2Position - traps.trap13.punishment;
+		},100)
 	}
 	if (player2Position === 19) {
 		trapText.innerHTML = traps.trap19.title + " " + traps.trap19.description;
 		setTimeout(function() {
-			player2Position = 16;
-		},1500)
+			player2Position = player2Position - traps.trap19.punishment;
+		},100)
 	}
 	if (player2Position === 26) {
 		trapText.innerHTML = traps.trap26.title + " " + traps.trap26.description;
 		setTimeout(function() {
-			player2Position = 21;
-		},1500)
+			player2Position = player2Position - traps.trap26.punishment;
+		},100)
 	}
 }
 // Character select functions. These checks if the player1 and player2 character variables are empty
