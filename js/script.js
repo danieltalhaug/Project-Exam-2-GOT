@@ -160,6 +160,9 @@ function controlGameText() {
 		} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 			characterSelectText.innerHTML = "Player 2, Please select your Hero."
 		}
+	if ((player1Character.length >= 1) && (player2Character.length >= 1)) {
+			characterSelectText.innerHTML = ""
+		}
 	
 	if (player1Throws === player2Throws) {
 		headerInfo.innerHTML = "Player 1, Roll the dice.";
