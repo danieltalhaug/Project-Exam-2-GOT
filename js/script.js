@@ -395,96 +395,98 @@ function spawnPlayer1Piece() {
 	tile1.appendChild(player1node);
 	
 	setInterval(function() {
-		if (player1Position === 1) {
+		switch (true) {
+			case player1Position === 1:
 				tile1.appendChild(player1node);
-			}
-		if (player1Position === 2) {
+				break;
+			case player1Position === 2:
 				tile2.appendChild(player1node);
-			}
-		if (player1Position === 3) {
+				break;
+			case player1Position === 3:
 				tile3.appendChild(player1node);
-			}
-		if (player1Position === 4) {
+				break;
+			case player1Position === 4:
 				tile4.appendChild(player1node);
-			}
-		if (player1Position === 5) {
+				break;
+			case player1Position === 5:
 				tile5.appendChild(player1node);
-			}
-		if (player1Position === 6) {
+				break;
+			case player1Position === 6:
 				tile6.appendChild(player1node);
-			}
-		if (player1Position === 7) {
+				break;
+			case player1Position === 7:
 				tile7.appendChild(player1node);
-			}
-		if (player1Position === 8) {
+				break;
+			case player1Position === 8:
 				tile8.appendChild(player1node);
-			}
-		if (player1Position === 9) {
+				break;
+			case player1Position === 9:
 				tile9.appendChild(player1node);
-			}
-		if (player1Position === 10) {
+				break;
+			case player1Position === 10:
 				tile10.appendChild(player1node);
-			}
-		if (player1Position === 11) {
+				break;
+			case player1Position === 11:
 				tile11.appendChild(player1node);
-			}
-		if (player1Position === 12) {
+				break;
+			case player1Position === 12:
 				tile12.appendChild(player1node);
-			}
-		if (player1Position === 13) {
+				break;
+			case player1Position === 13:
 				tile13.appendChild(player1node);
-			}
-		if (player1Position === 14) {
+				break;
+			case player1Position === 14:
 				tile14.appendChild(player1node);
-			}
-		if (player1Position === 15) {
+				break;
+			case player1Position === 15:
 				tile15.appendChild(player1node);
-			}
-		if (player1Position === 16) {
+				break;
+			case player1Position === 16:
 				tile16.appendChild(player1node);
-			}
-		if (player1Position === 17) {
+				break;
+			case player1Position === 17:
 				tile17.appendChild(player1node);
-			}
-		if (player1Position === 18) {
+				break;
+			case player1Position === 18:
 				tile18.appendChild(player1node);
-			}
-		if (player1Position === 19) {
+				break;
+			case player1Position === 19:
 				tile19.appendChild(player1node);
-			}
-		if (player1Position === 20) {
+				break;
+			case player1Position === 20:
 				tile20.appendChild(player1node);
-			}
-		if (player1Position === 21) {
+				break;
+			case player1Position === 21:
 				tile21.appendChild(player1node);
-			}
-		if (player1Position === 22) {
+				break;
+			case player1Position === 22:
 				tile22.appendChild(player1node);
-			}
-		if (player1Position === 23) {
+				break;
+			case player1Position === 23:
 				tile23.appendChild(player1node);
-			}
-		if (player1Position === 24) {
+				break;
+			case player1Position === 24:
 				tile24.appendChild(player1node);
-			}
-		if (player1Position === 25) {
+				break;
+			case player1Position === 25:
 				tile25.appendChild(player1node);
-			}
-		if (player1Position === 26) {
+				break;
+			case player1Position === 26:
 				tile26.appendChild(player1node);
-			}
-		if (player1Position === 27) {
+				break;
+			case player1Position === 27:
 				tile27.appendChild(player1node);
-			}
-		if (player1Position === 28) {
+				break;
+			case player1Position === 28:
 				tile28.appendChild(player1node);
-			}
-		if (player1Position === 29) {
+				break;
+			case player1Position === 29:
 				tile29.appendChild(player1node);
-			}
-		if (player1Position === 30) {
+				break;
+			case player1Position === 30:
 				tile30.appendChild(player1node);
-			}
+				break;
+		}
 	}, 1000)
 }
 function spawnPlayer2Piece() {
@@ -494,96 +496,98 @@ function spawnPlayer2Piece() {
 	player2node.appendChild(player2icon);
 	
 	setInterval(function() {
-		if (player2Position === 1) {
+		switch (true) {
+			case player2Position === 1:
 				tile1.appendChild(player2node);
-			}
-		if (player2Position === 2) {
+				break;
+			case player2Position === 2:
 				tile2.appendChild(player2node);
-			}
-		if (player2Position === 3) {
+				break;
+			case player2Position === 3:
 				tile3.appendChild(player2node);
-			}
-		if (player2Position === 4) {
+				break;
+			case player2Position === 4:
 				tile4.appendChild(player2node);
-			}
-		if (player2Position === 5) {
+				break;
+			case player2Position === 5:
 				tile5.appendChild(player2node);
-			}
-		if (player2Position === 6) {
+				break;
+			case player2Position === 6:
 				tile6.appendChild(player2node);
-			}
-		if (player2Position === 7) {
+				break;
+			case player2Position === 7:
 				tile7.appendChild(player2node);
-			}
-		if (player2Position === 8) {
+				break;
+			case player2Position === 8:
 				tile8.appendChild(player2node);
-			}
-		if (player2Position === 9) {
+				break;
+			case player2Position === 9:
 				tile9.appendChild(player2node);
-			}
-		if (player2Position === 10) {
+				break;
+			case player2Position === 10:
 				tile10.appendChild(player2node);
-			}
-		if (player2Position === 11) {
+				break;
+			case player2Position === 11:
 				tile11.appendChild(player2node);
-			}
-		if (player2Position === 12) {
+				break;
+			case player2Position === 12:
 				tile12.appendChild(player2node);
-			}
-		if (player2Position === 13) {
+				break;
+			case player2Position === 13:
 				tile13.appendChild(player2node);
-			}
-		if (player2Position === 14) {
+				break;
+			case player2Position === 14:
 				tile14.appendChild(player2node);
-			}
-		if (player2Position === 15) {
+				break;
+			case player2Position === 15:
 				tile15.appendChild(player2node);
-			}
-		if (player2Position === 16) {
+				break;
+			case player2Position === 16:
 				tile16.appendChild(player2node);
-			}
-		if (player2Position === 17) {
+				break;
+			case player2Position === 17:
 				tile17.appendChild(player2node);
-			}
-		if (player2Position === 18) {
+				break;
+			case player2Position === 18:
 				tile18.appendChild(player2node);
-			}
-		if (player2Position === 19) {
+				break;
+			case player2Position === 19:
 				tile19.appendChild(player2node);
-			}
-		if (player2Position === 20) {
+				break;
+			case player2Position === 20:
 				tile20.appendChild(player2node);
-			}
-		if (player2Position === 21) {
+				break;
+			case player2Position === 21:
 				tile21.appendChild(player2node);
-			}
-		if (player2Position === 22) {
+				break;
+			case player2Position === 22:
 				tile22.appendChild(player2node);
-			}
-		if (player2Position === 23) {
+				break;
+			case player2Position === 23:
 				tile23.appendChild(player2node);
-			}
-		if (player2Position === 24) {
+				break;
+			case player2Position === 24:
 				tile24.appendChild(player2node);
-			}
-		if (player2Position === 25) {
+				break;
+			case player2Position === 25:
 				tile25.appendChild(player2node);
-			}
-		if (player2Position === 26) {
+				break;
+			case player2Position === 26:
 				tile26.appendChild(player2node);
-			}
-		if (player2Position === 27) {
+				break;
+			case player2Position === 27:
 				tile27.appendChild(player2node);
-			}
-		if (player2Position === 28) {
+				break;
+			case player2Position === 28:
 				tile28.appendChild(player2node);
-			}
-		if (player2Position === 29) {
+				break;
+			case player2Position === 29:
 				tile29.appendChild(player2node);
-			}
-		if (player2Position === 30) {
+				break;
+			case player2Position === 30:
 				tile30.appendChild(player2node);
-			}
+				break;
+		}
 	}, 1000)
 }
 // Functions called in the gameLoop function will run over and over. 
