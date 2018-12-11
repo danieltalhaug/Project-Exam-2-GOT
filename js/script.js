@@ -118,26 +118,30 @@ function startGame() {
 // Rolls a dice and moves the players on the board. 
 function rollDice() {
 	clearTrapText();
-	var randomNumber = Math.floor(Math.random() * 6) + 1;
-	dice.innerHTML = randomNumber;
-	if (player1Throws === player2Throws) {
-		player1Position = player1Position + randomNumber;
-		if(randomNumber != 6) {
-			player1Throws++;
-		}
+	if ((player1Position >= 30) || (player2Position >= 30)) {
+		return
 	} else {
-		if (player1Throws > player2Throws) {
-			player2Position = player2Position + randomNumber;
+		var randomNumber = Math.floor(Math.random() * 6) + 1;
+		dice.innerHTML = randomNumber;
+		if (player1Throws === player2Throws) {
+			player1Position = player1Position + randomNumber;
 			if(randomNumber != 6) {
-				player2Throws++;
+				player1Throws++;
 			}
-		}
-		if(player1Position >= 30) {
-			player1Position = 30;
-		}
-		if(player2Position >= 30) {
-			player2Position = 30;
-		}
+		} else {
+			if (player1Throws > player2Throws) {
+				player2Position = player2Position + randomNumber;
+				if(randomNumber != 6) {
+					player2Throws++;
+				}
+			}
+			if(player1Position >= 30) {
+				player1Position = 30;
+			}
+			if(player2Position >= 30) {
+				player2Position = 30;
+			}
+		}	
 	}
 }
 // Adds instructions to the player selection overlay based on the length of the player1 and player 2 character variables.
