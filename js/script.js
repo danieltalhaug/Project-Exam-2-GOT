@@ -13,17 +13,6 @@ var player2Character = "",
 var playerPieces = [],
 	enableDebug = true;
 
-var robbStarkCard = document.getElementById('robbStarkCard'),
-	sansaStarkCard = document.getElementById('sansaStarkCard'),
-	aryaStarkCard = document.getElementById('aryaStarkCard'),
-	jonSnowCard = document.getElementById('jonSnowCard'),
-	theonGreyjoyCard = document.getElementById('theonGreyjoyCard'),
-	tyrionLannisterCard = document.getElementById('tyrionLannisterCard'),
-	stannisBaratheonCard = document.getElementById('stannisBaratheonCard'),
-	davosSeaworthCard = document.getElementById('davosSeaworthCard'),
-	daenerysTargaryenCard = document.getElementById('daenerysTargaryenCard'),
-	viserysTargaryenCard = document.getElementById('viserysTargaryenCard');
-
 var characterOverlay = document.getElementById('characterSelection'),
 	startingGametTxt = document.getElementById('startingGametTxt'),
 	characterSelectText = document.getElementById('characterSelectText'),
@@ -128,8 +117,8 @@ function startGame() {
 
 // Rolls a dice and moves the players on the board. 
 function rollDice() {
+	clearTrapText();
 	var randomNumber = Math.floor(Math.random() * 6) + 1;
-	var dice = document.getElementById('dice');
 	dice.innerHTML = randomNumber;
 	if (player1Throws === player2Throws) {
 		player1Position = player1Position + randomNumber;
@@ -151,13 +140,31 @@ function rollDice() {
 		}
 	}
 }
-// Adds instructions to the player selection overlay based on the length of the player1 and player 2 character variables. 
-function selectHeroText() {
+// Adds instructions to the player selection overlay based on the length of the player1 and player 2 character variables.
+// Changed to also control the text in the dicebox. 
+function controlGameText() {
 	if ((player1Character.length === 0) && (player2Character.length === 0)) {
 			characterSelectText.innerHTML = "Player 1, Please select your Hero."
 		} else if ((player1Character.length > 0) && (player2Character.length === 0)) {
 			characterSelectText.innerHTML = "Player 2, Please select your Hero."
 		}
+	
+	if (player1Throws === player2Throws) {
+		headerInfo.innerHTML = "Player 1, Roll the dice.";
+	} else {
+		headerInfo.innerHTML = "Player 2, Roll the dice.";
+	}
+	if (player1Position >= 30) {
+		headerInfo.innerHTML = "Player 1, Wins the game!";
+		player1Position = 30;
+	} else if (player2Position >= 30) {
+		headerInfo.innerHTML = "Player 2, Wins the game!";
+		player2Position = 30;
+	}
+}
+// Clears the content of the trapText ID. Function is called in rollDice() on every click. 
+function clearTrapText() {
+	trapText.innerHTML = "";
 }
 // Displays text and moves gamepieces based on position. Information comes from the traps object.
 // I tried to subtract traps.trap7.punishment from player1&2position but it wouldn't work.
@@ -623,7 +630,7 @@ function spawnPlayer2Piece() {
 // Functions called in the gameLoop function will run over and over. 
 function gameLoop() {
 	setInterval(function() {
-		selectHeroText();
+		controlGameText();
 		enableDebugMonitor();
 		debugMonitor();
 		trapTiles();
