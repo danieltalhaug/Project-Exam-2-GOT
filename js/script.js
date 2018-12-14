@@ -11,7 +11,7 @@ var player2Character = "",
 
 // playerPieces gets it's content from the selectCharacter functions when pressed. The content is used in the spawnPlayer1&2Piece functions. 
 var playerPieces = [],
-	enableDebug = true;
+	enableDebug = false;
 
 var characterOverlay = document.getElementById('characterSelection'),
 	victoryOverlay = document.getElementById('victoryScreen'),
@@ -62,24 +62,24 @@ var tile1 = document.getElementById('tile1'),
 
 var traps = {
 	trap7: {
-		title		: "Frostbite!",
-		description	: "It's too cold in the north. Your army is freezing and soldiers are getting frostbite. Some soldiers had to have their toes and fingers removed. Take two steps back.",
-		punishment	: 2
+		title		: "A massacre",
+		description	: "The owner of the castle insisted on your army staying the night. Men were woken up by the screams of their comrades as they were being murdered. It was a trap. Take three steps back",
+		punishment	: 3
 	},
 	trap13: {
-		title		: "Rough Seas",
-		description	: "The seas cannot be tamed. Strong winds and high waves caused some of your ships to crash and sink. Take four steps back.",
+		title		: "Broken bridge",
+		description	: "The weight of your whole army made the bridge cave in. Some men fell though and landed in the water. Too bad they can't swim. Take four steps back.",
 		punishment	: 4
 	},
 	trap19: {
-		title		: "Greyscale!",
-		description	: "Some men contracted Greyscale while making their way through the swamp. There is no time to find a cure and the soldiers had to be shunned. Take three steps back.",
-		punishment	: 3
+		title		: "Rough Seas!",
+		description	: "The seas cannot be tamed. Strong winds and high waves caused some of your ships to crash and sink. Take five steps back.",
+		punishment	: 5
 	},
 	trap26: {
 		title		: "Starvation!",
-		description	: "It's so hot that your food supplies has started to rotten. Some soldiers decided to eat anyways and got sick while the rest refused and are now starving. Take five steps back.",
-		punishment	: 5
+		description	: "It's so hot that your food supplies has started to rotten. Some soldiers decided to eat anyways and got sick while the rest refused and are now starving. Take six steps back.",
+		punishment	: 6
 	}
 };
 // Feed debug box with information. This updates itself every 1 second. 
@@ -122,7 +122,6 @@ function startGame() {
 	spawnPlayer1Piece();
 	spawnPlayer2Piece();
 }
-
 // Rolls a dice and moves the players on the board. 
 function rollDice() {
 	clearTrapText();
@@ -448,7 +447,6 @@ function spawnPlayer1Piece() {
 	player1icon.src = playerPieces[0];
 	player1node.appendChild(player1icon);
 	tile1.appendChild(player1node);
-	
 	setInterval(function() {
 		switch (true) {
 			case player1Position === 1:
@@ -549,7 +547,6 @@ function spawnPlayer2Piece() {
 	var player2icon = document.createElement('img');
 	player2icon.src = playerPieces[1];
 	player2node.appendChild(player2icon);
-	
 	setInterval(function() {
 		switch (true) {
 			case player2Position === 1:
@@ -654,6 +651,5 @@ function gameLoop() {
 		trapTiles();
 	}, 500)
 }
-
 // Call functions here
 gameLoop();
