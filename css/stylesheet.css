@@ -149,36 +149,17 @@ h4,h5,h6,p {
         transform: scale(1);
     }
 }
-.card--background_robb {
-	background-image: url("../images/heroes/Robb_Stark.png");
-}
-.card--background_sansa {
-	background-image: url("../images/heroes/Sansa_Stark.png");
-}
-.card--background_arya {
-	background-image: url("../images/heroes/Arya_Stark.png");
-}
-.card--background_jon {
-	background-image: url("../images/heroes/Jon_Snow.png");
-}
-.card--background_theon{
-	background-image: url("../images/heroes/Theon_Greyjoy.png");
-}
-.card--background_tyrion {
-	background-image: url("../images/heroes/Tyrion_Lannister.png");
-}
-.card--background_stannis {
-	background-image: url("../images/heroes/Stannis_Baratheon.png");
-}
-.card--background_davos {
-	background-image: url("../images/heroes/Davos_Seaworth.png");
-}
-.card--background_daenerys {
-	background-image: url("../images/heroes/Daenerys_Targaryen.png");
-}
-.card--background_viserys {
-	background-image: url("../images/heroes/Viserys_Targaryen.png");
-}
+.card--background_robb { background-image: url("../images/heroes/Robb_Stark.png");}
+.card--background_sansa { background-image: url("../images/heroes/Sansa_Stark.png");}
+.card--background_arya { background-image: url("../images/heroes/Arya_Stark.png");}
+.card--background_jon { background-image: url("../images/heroes/Jon_Snow.png");}
+.card--background_theon{ background-image: url("../images/heroes/Theon_Greyjoy.png");}
+.card--background_tyrion { background-image: url("../images/heroes/Tyrion_Lannister.png");}
+.card--background_stannis { background-image: url("../images/heroes/Stannis_Baratheon.png");}
+.card--background_davos { background-image: url("../images/heroes/Davos_Seaworth.png");}
+.card--background_daenerys { background-image: url("../images/heroes/Daenerys_Targaryen.png");}
+.card--background_viserys { background-image: url("../images/heroes/Viserys_Targaryen.png");}
+
 .container {
 	display: block;
 	margin: 200px auto 0 auto;
@@ -203,18 +184,6 @@ h4,h5,h6,p {
 	height: 100px;
 	width: 100px;
 	margin: 1px;
-}
-.tile--start {
-	background-color: #43972e;
-}
-.tile--trap {
-	background-color: #972e32;
-}
-.tile--path {
-	background-color: #2e6a97;
-}
-.tile--outside {
-	background-color: #12293b;
 }
 .tile-count {
 	padding-left: 5px; 
@@ -269,4 +238,100 @@ h4,h5,h6,p {
 }
 .extra-info {
 	font-size: 2em;
+}
+/* Row 1 */
+.tiles-row-1-1 { background-image: url("../images/tiles/TilesRow1-1.png"); }
+.tiles-row-1-2 { background-image: url("../images/tiles/TilesTile-1.png"); }
+.tiles-row-1-3 { background-image: url("../images/tiles/Tilesrow1-3.png"); }
+.tiles-row-1-4 { background-image: url("../images/tiles/TilesRow1-4.png"); }
+.tiles-row-1-5 { background-image: url("../images/tiles/TilesRow1-5.png"); }
+.tiles-row-1-6 { background-image: url("../images/tiles/TilesRow1-6.png"); }
+.tiles-row-1-7 { background-image: url("../images/tiles/TilesRow1-7.png"); }
+.tiles-row-1-8 { background-image: url("../images/tiles/TilesRow1-8.png"); }
+.tiles-row-1-9 { background-image: url("../images/tiles/TilesRow1-9.png"); }
+.tiles-row-1-10 { background-image: url("../images/tiles/TilesRow1-10.png"); }
+.tiles-row-1-11 { background-image: url("../images/tiles/TilesRow1-11.png"); }
+/* Row 2 */
+.tiles-row-2-1 { background-image: url("../images/tiles/Tilesrow2-1.png"); }
+.tiles-row-2-2 { background-image: url("../images/tiles/TilesTile-2.png"); }
+.tiles-row-2-3 { background-image: url("../images/tiles/TilesTile-3.png"); }
+.tiles-row-2-4 { background-image: url("../images/tiles/TilesTile-4.png"); }
+.tiles-row-2-5 { background-image: url("../images/tiles/TilesTile-5.png"); }
+.tiles-row-2-6 { background-image: url("../images/tiles/TilesTile-6.png"); }
+.tiles-row-2-7 { background-image: url("../images/tiles/TilesTile-7-Trap.png"); }
+.tiles-row-2-8 { background-image: url("../images/tiles/TilesTile-8.png"); }
+.tiles-row-2-9 { background-image: url("../images/tiles/TilesTile-9.png"); }
+.tiles-row-2-10 { background-image: url("../images/tiles/TilesTile-10.png"); }
+.tiles-row-2-11 { background-image: url("../images/tiles/Tilesrow2-11.png"); }
+/* Row 3 */
+.tiles-row-3-1 { background-image: url("../images/tiles/Tilesrow3-1.png"); }
+.tiles-row-3-2 { background-image: url("../images/tiles/Tilesrow3-2.png"); }
+.tiles-row-3-3 { background-image: url("../images/tiles/Tilesrow3-3.png"); }
+.tiles-row-3-4 { background-image: url("../images/tiles/Tilesrow3-4.png"); }
+.tiles-row-3-5 { background-image: url("../images/tiles/Tilesrow3-5.png"); }
+.tiles-row-3-6 { background-image: url("../images/tiles/Tilesrow3-6.png"); }
+.tiles-row-3-7 { background-image: url("../images/tiles/Tilesrow3-7.png"); }
+.tiles-row-3-8 { background-image: url("../images/tiles/Tilesrow3-8.png"); }
+.tiles-row-3-9 { background-image: url("../images/tiles/Tilesrow3-9.png"); }
+.tiles-row-3-10 { background-image: url("../images/tiles/Tilestile-11.png"); } 
+.tiles-row-3-11 { background-image: url("../images/tiles/Tilesrow3-11.png"); }
+/* Row 4 */
+.tiles-row-4-1 { background-image: url("../images/tiles/Tilesrow4-1.png"); }
+.tiles-row-4-2 { background-image: url("../images/tiles/TilesTile-20.png"); }
+.tiles-row-4-3 { background: url("../images/tiles/TilesTile-19-Trap.png"); }
+.tiles-row-4-4 { background-image: url("../images/tiles/TilesTile-18.png"); }
+.tiles-row-4-5 { background-image: url("../images/tiles/TilesTile-17.png"); }
+.tiles-row-4-6 { background-image: url("../images/tiles/Tilestile-16.png"); }
+.tiles-row-4-7 { background-image: url("../images/tiles/Tilestile-15.png"); }
+.tiles-row-4-8 { background-image: url("../images/tiles/Tilestile-14.png"); }
+.tiles-row-4-9 { background-image: url("../images/tiles/Tilestile-13-trap.png"); }
+.tiles-row-4-10 { background-image: url("../images/tiles/Tilestile-12.png"); }
+.tiles-row-4-11 { background-image: url("../images/tiles/Tilesrow4-11.png"); }
+/* Row 5 */
+.tiles-row-5-1 { background-image: url("../images/tiles/Tilesrow5-1.png"); }
+.tiles-row-5-2 { background-image: url("../images/tiles/TilesTile-21.png"); }
+.tiles-row-5-3 { background-image: url("../images/tiles/Tilesrow5-3.png"); }
+.tiles-row-5-4 { background-image: url("../images/tiles/Tilesrow5-4.png"); }
+.tiles-row-5-5 { background-image: url("../images/tiles/Tilesrow5-5.png"); }
+.tiles-row-5-6 { background-image: url("../images/tiles/Tilesrow5-6.png"); }
+.tiles-row-5-7 { background-image: url("../images/tiles/Tilesrow5-7.png"); }
+.tiles-row-5-8 { background-image: url("../images/tiles/Tilesrow5-8.png"); }
+.tiles-row-5-9 { background-image: url("../images/tiles/Tilesrow5-9.png"); }
+.tiles-row-5-10 { background-image: url("../images/tiles/Tilesrow5-10.png"); }
+.tiles-row-5-11 { background-image: url("../images/tiles/Tilesrow5-11.png"); }
+/* Row 6 */
+.tiles-row-6-1 { background-image: url("../images/tiles/Tilesrow6-1.png"); }
+.tiles-row-6-2 { background-image: url("../images/tiles/TilesTile-22.png"); }
+.tiles-row-6-3 { background-image: url("../images/tiles/TilesTile-23.png"); }
+.tiles-row-6-4 { background-image: url("../images/tiles/TilesTile-24.png"); }
+.tiles-row-6-5 { background-image: url("../images/tiles/TilesTile-25.png"); }
+.tiles-row-6-6 { background-image: url("../images/tiles/TilesTile-26-TRAP.png"); }
+.tiles-row-6-7 { background-image: url("../images/tiles/TilesTile-27.png"); }
+.tiles-row-6-8 { background-image: url("../images/tiles/TilesTile-28.png"); }
+.tiles-row-6-9 { background-image: url("../images/tiles/TilesTile-29.png"); }
+.tiles-row-6-10 { background-image: url("../images/tiles/TilesTile-30.png"); }
+.tiles-row-6-11 { background-image: url("../images/tiles/Tilesrow6-11.png"); }
+/* Row 7 */
+.tiles-row-7-1 { background-image: url("../images/tiles/Tilesrow7-1.png"); }
+.tiles-row-7-2 { background-image: url("../images/tiles/Tilesrow7-2.png"); }
+.tiles-row-7-3 { background-image: url("../images/tiles/Tilesrow7-3.png"); }
+.tiles-row-7-4 { background-image: url("../images/tiles/Tilesrow7-4.png"); }
+.tiles-row-7-5 { background-image: url("../images/tiles/Tilesrow7-5.png"); }
+.tiles-row-7-6 { background-image: url("../images/tiles/Tilesrow7-6.png"); }
+.tiles-row-7-7 { background-image: url("../images/tiles/Tilesrow7-7.png"); }
+.tiles-row-7-8 { background-image: url("../images/tiles/Tilesrow7-8.png"); }
+.tiles-row-7-9 { background-image: url("../images/tiles/Tilesrow7-9.png"); }
+.tiles-row-7-10 { background-image: url("../images/tiles/Tilesrow7-10.png"); }
+.tiles-row-7-11 { background-image: url("../images/tiles/Tilesrow7-11.png"); }
+
+.tile--trap {
+	box-shadow: inset 0 0 0 100px rgba(207, 0, 0, 0.3);
+	border-radius: 5px;
+}
+.tile--path {
+	border-radius: 5px;
+}
+.tile--outside {
+	box-shadow: inset 0 0 0 100px rgba(18, 41, 59, 0.6);
+	border-radius: 5px;
 }
