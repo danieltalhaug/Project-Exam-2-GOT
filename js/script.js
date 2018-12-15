@@ -80,6 +80,11 @@ var traps = {
 		title		: "Starvation!",
 		description	: "It's so hot that your food supplies has started to rotten. Some soldiers decided to eat anyways and got sick while the rest refused and are now starving. Take six steps back.",
 		punishment	: 6
+	},
+	trap29: {
+		title		: "Massive battle!",
+		description	: "The queen regent saw you coming and her army defended the castle well. You suffered some big losses and had to retreat. Take seven steps back.",
+		punishment	: 7
 	}
 };
 // Feed debug box with information. This updates itself every 1 second. 
@@ -210,7 +215,13 @@ function trapTiles() {
 			player1Position = player1Position - traps.trap26.punishment;
 		},100)
 	}
-		if (player2Position === 7) {
+	if (player1Position === 29) {
+		trapText.innerHTML = traps.trap29.title + " " + traps.trap29.description;
+		setTimeout(function() {
+			player1Position = player1Position - traps.trap29.punishment;
+		},100)
+	}
+	if (player2Position === 7) {
 		trapText.innerHTML = traps.trap7.title + " " + traps.trap7.description;
 		setTimeout(function() {
 			player2Position = player2Position - traps.trap7.punishment;
@@ -232,6 +243,12 @@ function trapTiles() {
 		trapText.innerHTML = traps.trap26.title + " " + traps.trap26.description;
 		setTimeout(function() {
 			player2Position = player2Position - traps.trap26.punishment;
+		},100)
+	}
+		if (player2Position === 29) {
+		trapText.innerHTML = traps.trap29.title + " " + traps.trap29.description;
+		setTimeout(function() {
+			player2Position = player2Position - traps.trap29.punishment;
 		},100)
 	}
 }
