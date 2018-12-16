@@ -245,7 +245,7 @@ function trapTiles() {
 			player2Position = player2Position - traps.trap26.punishment;
 		},100)
 	}
-		if (player2Position === 29) {
+	if (player2Position === 29) {
 		trapText.innerHTML = traps.trap29.title + " " + traps.trap29.description;
 		setTimeout(function() {
 			player2Position = player2Position - traps.trap29.punishment;
